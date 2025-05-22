@@ -1,0 +1,16 @@
+body{
+    background: url(../img/img/cielo.jpg);
+    background-attachment: fixed;
+}
+
+#cabecera #logo{
+    background-color: #1F87C4;
+}
+
+#cabecera #menu ul li:hover{
+    background-color: #1F87C4;
+}
+
+#content #posts .post .leer{
+    background-color: #1F87C4;
+}

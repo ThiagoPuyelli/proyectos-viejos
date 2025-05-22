@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Formulario de Tarjeta de Crédito Dinámico</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<div class="container">
+		<div class="tarjeta" id="tarjeta">
+			<div class="frontal" id="frontal">
+                <div id="logo-marca">
+					<!--<img src="img/logos/visa.png" alt="">-->
+				</div>
+				<img id="chip" src="img/chip-tarjeta.png" alt="">
+				<div class="grupo" id="numero">
+					<label class="label">Número Tarjeta</label>
+					<p class="numero">#### #### #### ####</p>
+				</div>
+				<div id="flexbox">
+					<div id="nombre" class="grupo">
+						<label class="label">Nombre Tarjeta</label>
+						<p class="nombre">JHON DOE</p>
+					</div>
+					<div id="expiracion" class="grupo">
+						<label class="label">Expiración</label>
+						<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+					</div>
+				</div>
+			</div>
+			<div id="trasera" class="trasera">
+				<div class="barraNegra"></div>
+				<div id="informacion">
+				<div class="datos">
+                    <div id="firma" class="grupo">
+						<label class="label">Firma</label>
+						<p class="firma"></p>
+					</div>
+					<div id="ccv" class="grupo">
+						<label class="label">CCV</label>
+						<p class="ccvTarjeta"></p>
+					</div>
+				</div>
+				<p id="texto">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aspernatur cupiditate ab odit totam eum laudantium quibusdam voluptatum id alias.
+				</p>
+				<a href="#">www.tubanco.com</a>
+				</div>
+			</div>
+		</div>
+
+		<button id="mostrarFormulario">
+			<i class="fas fa-plus"></i>
+		</button>
+
+		<div id="formulario" class="formulario">
+			<div id="datosForm">
+			<div class="grupoForm">
+				<label class="labelForm">Número Tarjeta</label><br>
+				<input type="text" class="info" id="numeroTarjeta" maxlength="19" autocomplete="off">
+			</div>
+			<div class="grupoForm">
+				<label class="labelForm">Nombre</label><br>
+				<input type="text" class="info" id="nombreForm" autocomplete="off" maxlength="19">
+			</div>
+			<div class="flexForm">
+				<div class="expiracion">
+					<label class="labelForm">Expiración</label><br>
+					<select id="mes">
+						<option value="mes" selected disabled>Mes</option>
+					</select>
+					<i class="fas fa-angle-down"></i>
+					<select id="year">
+						<option value="year" selected disabled>Año</option>
+					</select>
+					<i class="fas fa-angle-down"></i>
+				</div>
+				<div class="ccv">
+					<label class="labelForm">CCV</label><br>
+					<input type="text" class="info" id="ccvForm" maxlength="3">
+				</div>
+			</div>
+			<button id="boton">Enviar</button>
+			</div>
+		</div>
+	</div>
+
+	<span>hola</span>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body{
+    background: url(../img/img/hojas.jpg);
+    background-attachment: fixed;
+}
+
+#cabecera #logo{
+    background-color: #245E3D;
+}
+
+#cabecera #menu ul li:hover{
+    background-color: #245E3D;
+}
+
+#content #posts .post .leer{
+    background-color: #245E3D;
+}

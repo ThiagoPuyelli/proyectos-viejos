@@ -1,0 +1,16 @@
+body{
+    background: url(../img/img/rojo.jpg);
+    background-attachment: fixed;
+}
+
+#cabecera #logo{
+    background-color: #CA3413;
+}
+
+#cabecera #menu ul li:hover{
+    background-color: #CA3413;
+}
+
+#content #posts .post .leer{
+    background-color: #CA3413;
+}

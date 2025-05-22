@@ -1,0 +1,306 @@
+/*ESTILOS GENERALES*/
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #ddeefc;
+	font-family: 'Lato', sans-serif;
+}
+
+.container{
+	width: 52%;
+	margin: 0 auto;
+	margin-top: 40px;
+	height: auto;
+	display: flex;
+	flex-flow: wrap column;
+	align-items: center;
+}
+
+/*ESTILOS DE TARJETAS*/
+
+.tarjeta{
+	width: 79%;
+	height: 315px;
+	margin: 0 auto;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	position: relative;
+	transition: .3s ease all;
+	color: #fff;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.tarjeta.active{
+	transform: rotateY(180deg);
+}
+
+/*PARTE FRONTAL TARJETA*/
+
+#frontal{
+	width: 100%;
+	transform: rotateY(0deg);
+	background-size: cover;
+	background-image: url("../img/bg-tarjeta/bg-tarjeta-02.jpg");
+	backface-visibility: hidden;
+	height: 100%; 
+	padding: 30px; 
+	border-radius: 15px;
+	position: absolute;
+	box-shadow: 4px 8px 8px gray;
+}
+
+#frontal #logo-marca{
+	float: right;
+}
+#frontal #logo-marca img{
+	width: 90px;
+}
+
+#frontal #chip{
+	width: 50px; 
+	margin-top: 55px;
+}
+
+#frontal .grupo{
+	font-size: 21px;
+}
+
+.grupo p{
+	height: 40px;
+}
+
+.grupo .nombre{
+	text-transform: uppercase;
+}
+
+#frontal .grupo .label{
+	color: gray;
+    font-size: 18px;
+}
+
+#numero{
+	margin-top: 20px;
+}
+
+#flexbox{
+	display: flex;
+	flex-flow: wrap row;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+#nombreForm{
+	text-transform: uppercase;
+}
+
+/* PARTE TRASERA TARJETA */
+
+#trasera{
+	transform: rotateY(180deg); 
+	background-size: cover;
+	backface-visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/bg-tarjeta/bg-tarjeta-02.jpg");
+	border-radius: 15px;
+	box-shadow: 4px 8px 8px gray;
+}
+
+.barraNegra{
+	margin-top: 30px;
+	height: 40px;
+	width: 100%;
+	background-color: black; 
+}
+
+#informacion{
+	padding: 30px;
+}
+
+.datos{
+	display: flex;
+	flex-flow: wrap row;
+	justify-content: space-between;
+}
+
+#firma{
+	width: 70%;
+}
+
+#firma p{
+	width: 100%;
+	background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+	font-family: "Liu Jian Mao Cao", cursive;
+	color: black;
+	font-size: 25px;
+	letter-spacing: 2px;
+}
+
+#ccv{
+	width: 20%;
+}
+
+#ccv p{
+	background-color: white;
+	width: 100%;
+	color: black;
+	font-size: 25px;
+}
+
+#texto{
+	font-size: 14px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+#trasera a{
+	color: white;
+	font-size: 14px;
+}
+
+/* BOTON QUE MUESTRA FORMULARIO */
+
+#mostrarFormulario{
+	width: 50px;
+	height: 50px;
+	border-radius: 999px;
+	border: none;
+	background-color: #2364d2;
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	margin-top: 289px;
+	cursor: pointer;
+	box-shadow: 4px 8px 8px gray;
+	transition: 300ms all;
+	z-index: 2;
+}
+
+#mostrarFormulario:hover{
+	background-color: #194a9e;
+}
+
+/* FORMULARIO */
+
+#formulario{
+	width: 100%;
+	background-color: white;
+	height: auto;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	transition: 300ms all;
+	margin-top: -100px;
+	border-radius: 10px;
+	margin-bottom: 100px;
+}
+
+#formulario.active{
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+}
+
+#formulario input,
+#formulario select{
+	transition: 300ms ease all;
+}
+
+#formulario input:hover,
+#formulario select:hover{
+	border: 2px solid #93BDED;
+}
+
+#formulario input:focus,
+#formulario select:focus{
+	outline: rgb(4,4,4);
+	box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
+}
+
+#datosForm{
+	margin-top: 150px;
+	padding-left: 27px;
+	padding-right: 27px;
+}
+
+.labelForm{
+    color: gray;
+}
+
+.grupoForm{
+	width: 100%;
+	height: 90px;
+}
+
+.grupoForm .info,
+.flexForm select,
+.flexForm .info {
+	height: 45px;
+	width: 100%;
+	border: 2px solid #ced6e0;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+.flexForm{
+	width: 100%;
+	display: flex;
+	flex-flow: wrap row;
+}
+
+.flexForm .expiracion{
+	width: 75%;
+}
+
+.flexForm .ccv{
+	width: 25%;
+}
+
+.flexForm .expiracion select{
+	width: 47%;
+}
+
+input,
+.flexForm select{
+	padding-left: 10px;
+}
+
+.grupoForm .info,
+.flexForm select,
+.flexForm .info{
+	font-size: 18px;
+}
+
+.flexForm select{
+	-webkit-appearance: none;
+}
+
+.flexForm i{
+	position: absolute;
+	margin-top: 20px;
+	margin-left: -24px;
+	z-index: 2;
+	color: #ced6e0;
+}
+
+#boton{
+	width: 100%;
+	height: 50px;
+	background-color: #2364d2;
+	color: white;
+	font-size: 22px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 300ms ease all;
+	box-shadow: 0px 0px 6px #2364d2;
+}
+
+#boton:hover{
+	background: #194a9e;
+}

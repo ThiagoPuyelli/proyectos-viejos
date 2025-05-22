@@ -1,0 +1,740 @@
+/*FUENTES*/
+@font-face{
+    font-family: BebasNeue;
+    src: url(../fonts/BebasNeue.otf);
+    font-weight: normal;
+    font-style: none;
+}
+@font-face{
+    font-family: TrebuchetMS;
+    src: url(../fonts/TrebuchetMS.ttf) format("truetype");
+    font-weight: normal;
+    font-style: none;
+}
+@font-face{
+    font-family: websymbols;
+    src: url(../fonts/websymbols-regular-webfont.eot#iefix) format("embebed-type"),
+    url(../fonts/websymbols-regular-webfont.svg) format("svg"),
+    url(../fonts/websymbols-regular-webfont.ttf) format("truetype"),
+    url(../fonts/websymbols-regular-webfont.woff) format("woff");
+}
+
+/*ESTILOS GENERALES*/
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-image: url(../img/pattern.png);
+}
+.sticker{
+    font-family: websymbols;
+}
+
+/*CABECERA*/
+
+#header{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+}
+
+#header #contenido_header{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#header #contenido_header #logo{
+    display: block;
+    float: left;
+    margin: 0 auto;
+    width: 200px;
+    height: 55px;
+    background-color: #37bcf9;
+    color: white;
+    margin: 7px;
+    cursor: pointer;
+    transition: all 300ms;
+    overflow: hidden;
+}
+#header #contenido_header #logo:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+#header #logo #symbols{
+    display: block;
+    font-family: websymbols;
+    float: left;
+    margin: 5px;
+    margin-left: 20px;
+    transition: all 700ms;
+    animation-name: rotate-tuerca;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-tuerca{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#header #logo #nombre{
+    font-family: BebasNeue;
+    float: right;
+    margin-right: 70px;
+    margin-top: 5px;
+    font-size: 40px;
+}
+
+#header #logo #nombre a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+#header #contenido_header #logo:hover #nombre a{
+    color: black;
+    transition: all 300ms;
+    animation: showBlog 500ms linear;
+}
+
+@keyframes showBlog{
+    to{
+        transform: translateX(0px);
+    }
+    from{
+        transform: translateX(200px);
+    }
+}
+
+#header #logo:hover #symbols{
+    animation: showTuerca 600ms linear;
+    transition: all 300ms;
+}
+
+@keyframes showTuerca{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+#header #menu{
+    display: block;
+    list-style: none;
+    float: right;
+}
+
+#header #menu ul li{
+    float: left;
+    margin: 20px;
+    list-style: none;
+}
+
+#header #menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-family: BebasNeue;
+    font-size: 25px;
+    letter-spacing: 1px;
+    transition: all 300ms;
+}
+
+#header #menu ul li a:hover{
+    color: #37bcf9;
+    transform: scale(1.2, 1.2);
+}
+
+/*BANNER*/
+
+#caja_banner{
+    margin: 0 auto; 
+    width: 1200px;
+    height: 120px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 2px #ccc;
+    margin-top: 20px;
+}
+
+#caja_banner #banner{
+    height: 100px;
+    width: 1180px;
+    background-image: url(../img/bakbaner.png);
+    margin: 10px;
+    background-position: -200px -200px;
+    overflow: hidden;
+    animation: moveBackground 10s linear;
+}
+
+@keyframes moveBackground{
+    from{
+        background-position: 0px 0px;
+    }
+    to{
+        background-position: -200px -200px;
+    }
+}
+
+#caja_banner #banner h1{
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-family: BebasNeue;
+    font-weight: normal;
+    font-size: 45px;
+    text-shadow: 2px 2px 1px black;
+    letter-spacing: 2px;
+    overflow: hidden;
+    animation: moveText 10s linear;
+}
+
+@keyframes moveText{
+    0%{
+        transform: translateX(-600%) scale(5, 5);
+        opacity: 1;
+    }
+    25%{
+        transform: translateX(600%) scale(5, 5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5, 5);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px) scale(1, 1);
+        opacity: 1;
+    }
+}
+
+/*TARJETAS*/
+
+#tarjetas{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.cards{
+    width: 210px;
+    height: 310px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 2px #ccc;
+    float: left;
+    margin: 14px;
+    margin-top: 70px;
+    cursor: pointer;
+    transition: all 300ms;
+    overflow: hidden;
+}
+.cards:hover{
+    background-color: black;
+}
+
+#tarjetas .cards .sticker{
+    font-family: websymbols;
+    font-size: 50px;
+    margin: 30px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.cards:hover .sticker{
+    color: #37bcf9;
+    animation: showSticker 300ms linear;
+    transform: scale(1.5, 1.5);
+}
+
+@keyframes showSticker{
+    from{
+        transform: scale(1.5, 1.5) translateY(-200%);
+    }
+    to{
+        transform: scale(1.5, 1.5) translateY(0%);
+    }
+}
+
+#tarjetas .cards .category{
+    color: #005399;
+    font-family: TrebuchetMS;
+    font-size: 22px;
+    text-align: center;
+    transition: 300ms all;
+}
+#tarjetas .cards:hover .category{
+    color: white;
+    animation: showCategory 300ms linear;
+    padding-top: 20px;
+}
+
+@keyframes showCategory{
+    from{
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+#tarjetas .cards .contenido{
+    text-align: center;
+    color: #005399;
+    margin: 5px;
+    margin-top: 20px; 
+    font-family: TrebuchetMS;
+}
+
+#tarjetas .cards:hover .contenido{
+    color: white;
+    padding-top: 10px;
+    animation: showParrafo 300ms linear;
+}
+
+@keyframes showParrafo{
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+/*BARRA LATERAL*/
+
+#lateral{
+    display: block;
+    width: 300px;
+    float: right;
+    margin-right: 60px;
+    margin-top: 100px;
+}
+#lateral .titulo{
+    width: 300px;
+    height: 50px;
+    background-image: url("../img/pxgray.png");
+    background-color: white; 
+    box-shadow: 2px 2px 1px black, 2px 3px 0px black, 1px 4px 2px black, 2px 2px 0px black;
+}
+#lateral .titulo h1{
+    line-height: 50px;
+    padding-left: 10px;
+    font-family: BebasNeue;
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+#lateral #formulario{
+    width: 260px;
+    height: 30px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px #ccc inset;
+    border-radius: 5px;
+    margin: 20px;
+}
+#lateral #formulario form input[type="text"]{
+    background-color: transparent;
+    border: none;
+    margin: 5px;
+    height: 20px;
+    padding-right: 75px;
+    color: gray;
+    transition: all 300ms;
+}
+#lateral #formulario form input[type="text"]:focus{
+    color: black;
+}
+#lateral #formulario form input[type="submit"]{
+    background-color: transparent;
+    height: 30px;
+    font-size: 16px;
+    color: #555555;
+    border: none;
+    border-left: 1px solid #ccc;
+    padding-left: 3px;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+#lateral .caja_lateral{
+    width: 270px;
+    height: 240px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px 0px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
+    margin: 20px;
+}
+
+#lateral #login input[type="email"],
+#lateral #login input[type="password"]{
+    width: 216px;
+    height: 30px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #ccc inset;
+    border-radius: 5px;
+    padding-left: 34px;
+}
+
+#lateral #login input[type="email"]{
+    margin-top: 20px;
+}
+#lateral #login span{
+    position: absolute;
+    margin-top: 26px;
+    margin-left: 17px;
+}
+#lateral #login #candado{
+    margin-top: 17px;
+    margin-left: 21px;
+}
+
+#lateral #login input[type="submit"]{
+    display: block;
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 17px;
+    color: white;
+    background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%); 
+    border: none;
+    font-size: 15px;
+    font-family: TrebuchetMS;
+    border: 1px solid #37bcf9;
+    cursor: pointer;
+}
+
+#lateral #login input[type="submit"]:hover{
+    box-shadow: 0px 0px 2px black;
+}
+
+#lateral #login a{
+    font-size: 14px;
+    margin: 15px;
+    color: #555555;
+    text-decoration: none;
+    font-family: TrebuchetMS;
+}
+#lateral #login a:hover{
+    text-decoration: underline;
+    color: #005399;
+}
+
+#lateral #redes{
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+}
+#lateral #redes .sticker{
+    display: block;
+    list-style: none;
+    margin: 20px;
+    margin-top: 6px;
+    margin-right: 100px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    float: left;
+}
+
+#lateral #redes .adorno{
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    border: 3px solid white;
+    box-shadow: 0px 0px 4px grey;
+    background-color: #f4f7fe;
+    position: absolute;
+    padding: 5px;
+    margin-left: 12px;
+    margin-top: 50px;
+    transform: translateX(80%);
+    transition: all 300ms;
+    opacity: 0;
+}
+#lateral #redes .red:hover .adorno{
+    opacity: 1;
+}
+
+@keyframes showAdornos{
+    from{
+        transform: translateX(-140%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+#lateral #redes .red:hover #twitter{
+    margin-top: 12px;
+    transform: translateX(80%);
+}
+
+#lateral #redes .red #twitter{
+    margin-top: 12px;
+    transform: translateX(0%);
+}
+
+#lateral #redes .red:hover #youtube{
+    margin-top: 133px;
+    margin-left: 4px;
+    transform: translateX(80%);
+}
+
+#lateral #redes .red #youtube{
+    margin-top: 133px;
+    margin-left: 4px;
+    transform: translateX(0%);
+}
+
+#lateral #redes .red:hover #facebook{
+    transform: translateX(80%);
+}
+
+#lateral #redes .red #facebook{
+    margin-top: 73px;
+    margin-left: -8px;
+    transform: translateX(0%);
+}
+
+
+/*ULTIMOS ARTICULOS*/
+
+#contenido{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 500px;
+}
+#contenido .titulo{
+    width: 860px;
+    height: 70px;
+    background-image: url(../img/pxgray.png);
+    background-color: white;
+    margin: 10px;
+    margin-left: 0%;
+    box-shadow: 2px 2px 1px black, 2px 3px 0px black, 1px 4px 2px black, 2px 2px 0px black;;
+}
+#contenido .titulo h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: BebasNeue;
+    letter-spacing: 2px;
+    font-weight: normal;
+    line-height: 70px;
+}
+#contenido .articulos{
+    width: 820px;
+    height: 110px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 2px #ccc;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 25px;
+}
+#contenido .articulos span{
+    float: right;
+    background-color: #303030;
+    margin: -10px;
+    color: white;
+    width: 27%;
+    min-height: 40px;
+    border-radius: 0px 0px 0px 5px;
+    font-family: TrebuchetMS;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+}
+#contenido .articulos h3 a{
+    color: #005399;
+    text-decoration: none;
+    font-family: TrebuchetMS;
+    font-size: 22px;
+    margin: 5px;
+}
+#contenido .articulos h3 a:hover{
+    color: #303030;
+}
+#contenido .articulos p{
+    font-family: TrebuchetMS;
+    font-size: 16px;
+    margin-top: 15px;
+}
+#contenido .articulos p a{
+    color: #005399;
+    text-decoration: none;
+}
+#contenido .articulos p a:hover{
+    color: #303030; 
+}
+#contenido #blog{
+    display: block;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    color: #005399;
+    font-family: BebasNeue;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 40px;
+    transition: 1s all;
+}
+
+#contenido #blog:hover{
+    color: white;
+    background-color: #555555;
+    border-radius: 100px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 4px black;
+    text-shadow: 1px 1px 1px black, 1px 1px 2px black, 1px 3px 1px black, 1px 4px 1px black, 1px 5px 1px black, 1px 6px 1px black;
+    animation: borderColor 10s linear infinite;
+}
+
+@keyframes borderColor{
+    0%{
+        border: 10px solid #37bcf9;
+    }
+    25%{
+        border: 10px solid green;
+    }
+    50%{
+        border: 10px solid yellow;
+    }
+    75%{
+        border: 10px solid white;
+    }
+    100%{
+        border: 10px solid #37bcf9;
+    }
+}
+
+/*PIE DE PAGINA*/
+
+footer{
+    width: 100%;
+    background-color: black;
+    margin-top: 100px;
+    padding-top: 20px;
+    height: 500px;
+}
+
+footer .titulo_footer{
+    width: 320px;
+    height: 60px;
+    background-image: url("../img/pxgray.png");
+    background-color: white;
+    border-radius: 5px;
+}
+
+footer .titulo_footer h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: BebasNeue;
+    letter-spacing: 2px;
+    line-height: 60px;
+}
+
+footer #menu_footer,
+footer #ubicacion{
+    width: 320px;
+    height: 360px;
+}
+
+footer #menu_footer{
+    margin: 30px;
+    float: left;
+    margin-left: 120px;
+}
+
+footer #menu_footer ul li{
+    margin-top: 40px;
+    list-style: white disc;
+    color: white;
+    border-bottom: 1px solid #ccc;
+    margin: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    transition: 300ms all;
+}
+
+footer #menu_footer ul li a{
+    transition: 300ms all;
+}
+
+footer #menu_footer ul li:hover a{
+    padding-left: 50px;
+    color: white;
+}
+
+footer #menu_footer ul li:first-child{
+    border: none;
+}
+
+footer #menu_footer ul li a{
+    color: #3eb8e5;
+    text-decoration: none;
+    font-family: TrebuchetMS;
+    font-weight: normal;
+    font-size: 25px;
+    padding-left: 10px;
+}
+footer #ubicacion{
+    float: left;
+    margin: 30px;
+    margin-left: 40px;
+}
+
+footer #ubicacion iframe{
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+footer #desarrollo{
+    height: 400px; 
+    float: left;
+    margin: 30px;
+    margin-left: 40px;
+}
+
+footer #desarrollo #html{
+    margin: 20px;
+    margin-left: 30px;
+}
+
+footer #desarrollo .iconito{
+    display: block;
+    width: 40px;
+    float: left;
+    margin: 7px;
+    margin-top: 12px;
+}
+
+footer #desarrollo #autor{
+    margin-top: 70px;
+}
+footer #desarrollo p{
+    color: white;
+    margin: 10px;
+    text-align: center;
+}

@@ -1,0 +1,201 @@
+/*VARIABLES*/
+
+:root{
+    --logo: #E50914;
+    --fondo: #141414;
+}
+
+/*ESTILOS GENERALES*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:#141414;
+    font-family: sans-serif;
+    color: white;
+}
+
+.blanco{
+    background-color: white !important;
+}
+/*CABECERA*/
+
+#cabecera{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+}
+
+#cabecera #logo{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--logo);   
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+#cabecera #menu ul{
+    display: flex;
+    flex-flow: wrap row;
+    list-style: none;
+    align-items: center;
+}
+
+#cabecera #menu ul li{
+    padding: 10px; 
+}
+
+#cabecera #menu ul li a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 300ms all;
+}
+
+#cabecera #menu ul li a:hover{
+    transform: scale(1.2, 1.2);
+    color: var(--logo);
+}
+
+/*BANNER*/
+
+.banner{
+    width: 92%;
+    height: 400px;
+    background-image: url("../img/narcos.jpg");
+    background-position: 0px -150px;
+    margin: 0 auto;
+    box-shadow: 500px 0px 200px black inset;
+    animation: movimientoFondo 30s infinite;
+}
+
+.banner .banner_texto{
+    display: block;
+    width: 450px;
+    height: 110px;
+    padding: 10px;
+    margin-top: 250px;
+    margin-left: 20px;
+    position: absolute;
+    letter-spacing: 2px;
+    transition: 1s all;
+}
+/*MENU DE PELICULAS*/
+
+.menu_peliculas{
+    width: 95%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.menu_peliculas .titulo_menu{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    padding: 5px;
+    padding-bottom: 20px;
+}
+
+.menu_peliculas .titulo_menu .peliculas_marcador button{
+    width: 20px; 
+    height: 3px; 
+    cursor: pointer;
+    background: #eee;
+    border-radius: 5px;
+    border: none; 
+    margin-right: 5px;
+}
+
+.menu_peliculas .flecha_atras{
+    height: 12%;
+    cursor: pointer;
+    width: 30px;
+    margin: 0 auto;
+    margin-left: 0px;
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+    position: absolute;
+    background: rgba(51, 51, 51, 0.7);
+    margin-top: 40px;
+    z-index: 3;
+    border: none;
+    transition: 300ms all;
+}
+
+.menu_peliculas .flecha_atras:hover{
+    background: black;
+}
+.menu_peliculas .flecha_atras img{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 4px;
+}
+
+.menu_peliculas .flecha_adelante{
+    display: flex;
+    align-items: center;
+    height: 12%;
+    cursor: pointer;
+    width: 30px;
+    background: rgba(51, 51, 51, 0.7);
+    font-weight: bold;
+    font-size: 45px;
+    text-align: right;
+    position: absolute;
+    float: right;
+    right: 2.5%;
+    z-index: 3;
+    margin-top: -110px;
+    border: none;
+    transition: 300ms all;
+}
+
+.menu_peliculas .flecha_adelante:hover{
+    background: black;
+}
+
+.menu_peliculas .flecha_adelante img{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 4px;
+}
+.menu_peliculas .contenedor_peliculas{
+    width: 6240px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 147px;
+    scroll-behavior: smooth;
+    transition: 300ms all;
+}
+
+.menu_peliculas .contenedor_peliculas .pelicula{
+    float: left;
+    width: 260px;
+    z-index: 1;
+    cursor: pointer;
+    transition: 300ms all;
+}
+.menu_peliculas .contenedor_peliculas .pelicula:hover{
+    transform: scale(1.2, 1.2);
+    z-index: 2;
+}
+
+.menu_peliculas .contenedor_peliculas .pelicula img{
+    width: 100%;
+    float: left;
+    transition: 300ms all;
+}
+
+.menu_pelicula .contenedor_peliculas .pelicula img:hover{
+    transform: scale(1.2, 1.2);
+}
